@@ -1,17 +1,36 @@
-package org.example;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner teclado = new Scanner(System.in);
+        int opc;
+        Clientes[] clientes = null;
+        Proveedor [] proveedors = null;
+        Producto [] productos = null;
+        Ciudades [] ciudades = null;
+        Estados [] estados= null;
+        do {
+            System.out.println("****** Menu Catalogo ******");
+            System.out.println("1. Clientes");
+            System.out.println("2. Productos");
+            System.out.println("3. Proveedores");
+            System.out.println("4. Ciudades");
+            System.out.println("5. Estados");
+            System.out.println("6. Reporte");
+            System.out.println("0. Salir");
+            System.out.print("Seleccione una opcion: ");
+            opc = teclado.nextInt();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+            switch (opc) {
+                case 1: clientes= Clientes.datos(); break;
+                case 2: productos = Producto.datos(); break;
+                case 3: proveedors = Proveedor.datos();break;
+                case 4: ciudades = Ciudades.datos(); break;
+                case 5: estados = Estados.datos(); break;
+                case 6: Clientes.imprimir(clientes); Producto.imprimir(productos); Proveedor.imprimir(proveedors);Ciudades.imprimir(ciudades); Estados.imprimir(estados); break;
+                case 0: System.out.println("Saliendo del programa. ¡Adios!"); break;
+                default: System.out.println("Upps! Intente nuevamente."); break;
+            }
+        } while (opc != 0);
+        teclado.close();
     }
 }
