@@ -1,11 +1,13 @@
-//version 1
+package org.example;//version 1
+import org.example.Proveedor;
+
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int opc;
         Clientes[] clientes = null;
-        Proveedor [] proveedors = null;
+        Proveedor[] proveedors = null;
         Producto [] productos = null;
         Ciudades [] ciudades = null;
         Estados [] estados= null;

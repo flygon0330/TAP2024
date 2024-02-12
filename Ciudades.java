@@ -1,3 +1,5 @@
+package org.example;
+
 import  java.util.*;
 public class Ciudades {
     public int clave;
@@ -56,7 +58,7 @@ public class Ciudades {
                     System.out.println("Clave: " + ciudades1.getClave());
                     System.out.println("--------------");
                 } else {
-                    System.out.println("la cuidade no existe.");
+                    System.out.println("la cuidad no existe.");
                 }
             }
         } else {
@@ -64,18 +66,4 @@ public class Ciudades {
         }
     }
 
-    public static void imprimir(Proveedor[] proveedor) {
-        if (proveedor != null) {
-            for (Proveedor proveedors : proveedor) {
-                if (proveedor != null) {
-                    System.out.println("Nombre: " + proveedors.getNombre());
-                    System.out.println("Clave: " + proveedors.getClave());
-                    System.out.println("--------------");
-                } else {
-                    System.out.println("La ciudad no existe.");
-                }
-            }
-        } else {
-            System.out.println("No hay ciudades para imprimir.");
-        }
-    }
+}

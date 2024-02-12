@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.Scanner;
 public class Clientes {
         private String nombre;
@@ -8,23 +10,23 @@ public class Clientes {
             this.clave = clave;
         }
 
-        public String getNombre() {
-            return nombre;
-        }
+    public String getNombre() {
+        return nombre;
+    }
 
-        public void setNombre(String nombre) {
-            this.nombre = nombre;
-        }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-        public int getClave() {
-            return clave;
-        }
+    public int getClave() {
+        return clave;
+    }
 
-        public void setClave(int clave) {
-            this.clave = clave;
-        }
+    public void setClave(int clave) {
+        this.clave = clave;
+    }
 
-        public static Clientes[] datos() {
+    public static Clientes[] datos() {
             System.out.println("Escriba  el numero de clientes:");
             Scanner teclado = new Scanner(System.in);
             int c = teclado.nextInt();
