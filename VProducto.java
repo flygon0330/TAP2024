@@ -5,21 +5,25 @@ public class VProducto {
     public static void main(String[]args){
     JFrame VentanaProd = new JFrame();
     
-    //JPanel Pan= new JPanel(new GridLayout(600, 400));
-   
     
-    VentanaProd.setSize(400, 300);
+
+    VentanaProd.setSize(600, 300);
     VentanaProd.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     VentanaProd.setTitle("Productos");
     VentanaProd.setLocation(400,150);
+    Color color = new Color(255,219,231);
     
+    //Panel
     JPanel panelG = new JPanel();
     panelG.setLayout(new javax.swing.BoxLayout(panelG, javax.swing.BoxLayout.Y_AXIS ));
+    panelG.setLayout(new GridLayout(7, 2, 10, 10));
+    panelG.setBackground(color);
     
     JPanel panelEncabezado = new JPanel();
     JPanel panelCuerpo = new JPanel();
     JPanel panelPie = new JPanel();
     
+    //Componentes
     JLabel lblEncabezado=new JLabel("Catalogo Producto");
     JLabel lblNombre = new JLabel("Nombre del Producto: ");
     JTextField jtxFNombre = new JTextField(20);
@@ -42,10 +46,7 @@ public class VProducto {
         jCmbCantidad.addItem("5");
     
    
-    
-
- 
-    
+  //Agregar componentes al panel
      panelEncabezado.add(lblEncabezado);
         panelCuerpo.add(lblClave);
         panelCuerpo.add(jtxFClave);
